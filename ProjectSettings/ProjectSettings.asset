@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 00000000000000000000000000000000
+  productGUID: c371cba21cdfc4efc8ea35f507649d1d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -141,9 +141,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: -802529340814861761, guid: a422e2a2e6c83184e9b23d6413331359, type: 2}
-  - {fileID: 11400000, guid: 398d945149746a94899cafbfeddf8c9f, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -842,7 +840,7 @@ PlayerSettings:
   cloudProjectId: e9cf5687-91f2-4cf0-9010-1db3be22fdc8
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: VRTutorial
   organizationId: sssd
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
