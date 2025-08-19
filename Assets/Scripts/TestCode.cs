@@ -5,19 +5,26 @@ using UnityEngine.Rendering;
 
 public class TestCode : MonoBehaviour
 {
-    [SerializeField] private GameObject leftHand;
-    [SerializeField] private GameObject rightHand;
-    // Update is called once per frame
+    [SerializeField] private Transform crosshair;
+
+    public float speed = 5;
+    public CharacterController cc;
+
     void Update()
     {
-        if (ARAVRInput.Get(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
+        if (ARAVRInput.GetDown(ARAVRInput.Button.One, ARAVRInput.Controller.LTouch))
         {
-            leftHand.transform.position = ARAVRInput.LHandPosition;
+            // 높이를 다시 맞춘다.
+            OVRManager.display.RecenterPose();
         }
-
-        if (ARAVRInput.Get(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
-        {
-            rightHand.transform.position = ARAVRInput.RHandPosition;
-        }
+        
+        float h = ARAVRInput.GetAxis("Horizontal");
+        float v = ARAVRInput.GetAxis("Vertical");
+        
+        Vector3 dir = new Vector3(h, 0, v);
+        if(dir.magnitude > 1f) dir.Normalize();
+        cc.Move(dir * speed * Time.deltaTime);
+        
+        ARAVRInput.DrawCrosshair(crosshair, false);
     }
 }

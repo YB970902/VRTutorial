@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Overlay UI
   - Water
   - UI
-  - 
+  - Terrain
   - 
   - Grabbable
   - Hands
